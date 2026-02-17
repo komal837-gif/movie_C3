@@ -27,11 +27,11 @@
                     <input type="text" class="form-control mb-2" [formControlName]="i">
                 </div>
                 <div class="col-2" *ngIf="i > 0">
-                    <button (click)="removeCast(i)"  mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
+                    <button type="button" (click)="removeCast(i)"  mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
                 </div>
             </div>
         </div>
-        <button (click)="addCast()" type="button" class="my-2" mat-raised-button color="primary">Add Cast</button>
+        <button type="button" (click)="addCast()" type="button" class="my-2" mat-raised-button color="primary">Add Cast</button>
     </div>
 
     <div formArrayName="genre">
@@ -41,12 +41,12 @@
                     <input type="text" class="form-control" [formControlName]="i">
                 </div>
                 <div class="col-2" *ngIf="i > 0">
-                    <button mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
+                    <button mat-mini-fab color="warn" type="button"><mat-icon>delete</mat-icon></button>
                 </div>
             </div>
          </div>
 
-        <button mat-raised-button class="my-2" color="primary">Add genre</button>
+        <button mat-raised-button class="my-2" color="primary" type="button">Add genre</button>
     </div>
 
     <button *ngIf="!isInEditMode" class="bt btn-block" mat-raised-button color="primary">Add Movie</button>
