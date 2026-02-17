@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2 mb-4 md-mb-0">
+        <app-movie-form></app-movie-form>
+    </div>
+</div>
+<div class="row">
+   <ng-container *ngIf="movieArr.length > 0;else nomovies">
+     <div class="col-md-4 mb-4" *ngFor="let movie of movieArr;trackBy:trackById">
+        <app-movie-card [movieObj]="movie"></app-movie-card>
+    </div>
+   </ng-container>
+
+   <ng-template #nomovies>
+        <p class="alert alert-info p-4">
+            No Movies Available!!!
+        </p>
+   </ng-template>
+</div>
