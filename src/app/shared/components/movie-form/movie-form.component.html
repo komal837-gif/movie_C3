@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" (click)="addCast()" type="button" class="my-2" mat-raised-button color="primary">Add Cast</button>
+        <button [disabled]="cast.invalid" type="button" (click)="addCast()" type="button" class="my-2" mat-raised-button color="primary">Add Cast</button>
     </div>
 
     <div formArrayName="genre">
@@ -46,7 +46,7 @@
             </div>
          </div>
 
-        <button mat-raised-button class="my-2" color="primary" type="button">Add genre</button>
+        <button [disabled]="genre.invalid" mat-raised-button class="my-2" color="primary" type="button">Add genre</button>
     </div>
 
     <button *ngIf="!isInEditMode" class="bt btn-block" mat-raised-button color="primary">Add Movie</button>
